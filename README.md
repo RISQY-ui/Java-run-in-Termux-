@@ -1,15 +1,15 @@
-# Java-run-in-Termux-
+# ☕ Complete Java Guide for Termux
 
-# ☕ RANGKUMAN LENGKAP JAVA DI TERMUX
+---
 
-1. Install Java di Termux
+📌 1. Install Java on Termux
 
 ```bash
 pkg update && pkg upgrade -y
 pkg install openjdk-21
 ```
 
-Cek versi:
+Check version:
 
 ```bash
 java --version
@@ -18,38 +18,38 @@ javac --version
 
 ---
 
-# 2. Membuat File Java dengan Nano
+📝 2. Create Java File with Nano
 
 ```bash
 nano Main.java
 ```
 
-Tulis kode Java-nya.
-Simpan: CTRL+O → Enter → CTRL+X keluar.
+Write your Java code.
+Save: CTRL+O → Enter → CTRL+X to exit.
 
 ---
 
-# 3. Compile File Java
+🔨 3. Compile Java File
 
 ```bash
 javac Main.java
 ```
 
-Jika berhasil, muncul file Main.class.
+If successful, a Main.class file will appear.
 
 ---
 
-# 4. Menjalankan Program
+🚀 4. Run the Program
 
 ```bash
 java Main
 ```
 
-Catatan: Jangan pakai .class atau .java saat menjalankan.
+Note: Do not use .class or .java when running.
 
 ---
 
-# 5. Contoh Kode Java (Buat Latihan)
+💻 5. Sample Java Code (For Practice)
 
 ```java
 import java.util.Scanner;
@@ -58,15 +58,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Masukkan nilai ujian: ");
-        int nilai = input.nextInt();
+        System.out.print("Enter exam score: ");
+        int score = input.nextInt();
 
-        if (nilai >= 75) {
-            System.out.println("Lulus");
-        } else if (nilai >= 50) {
+        if (score >= 75) {
+            System.out.println("Passed");
+        } else if (score >= 50) {
             System.out.println("Remedial");
         } else {
-            System.out.println("Tidak Lulus");
+            System.out.println("Failed");
         }
 
         input.close();
@@ -76,33 +76,30 @@ public class Main {
 
 ---
 
-# 6. Alur Cepat Java
+⚡ 6. Quick Java Workflow
 
-Perintah Fungsi
-nano Main.java Buat / edit file Java
-javac Main.java Kompilasi (jadikan .class)
-java Main Jalankan program
+Command Function
+nano Main.java Create / edit Java file
+javac Main.java Compile (to .class)
+java Main Run program
+
+---
+
+❌ 7. Common Java Errors
+
+Error Cause Solution
+javac: command not found Java not installed Install openjdk-21
+class Main is public, should be declared in a file named Main.java Class name doesn't match file name Match file name and class name
+cannot find symbol Typo or missing import Check code syntax
 
 ---
 
-# 7. Kesalahan Umum Java
+📊 C++ vs Java Comparison
 
-Error Penyebab Solusi
-javac: command not found Java belum terinstall Install openjdk-21
-class Main is public, should be declared in a file named Main.java Nama class != nama file Samakan nama file dan class
-cannot find symbol Typo atau lupa import Cek penulisan kode
-
----
-```
-
-📊 Perbandingan C++ vs Java
-
-Aspek C++ Java
+Aspect C++ Java
 Compile clang++ main.cpp -o main javac Main.java
 Run ./main java Main
-Ekstensi .cpp .java
-Hasil compile File biner main File bytecode Main.class
+Extension .cpp .java
+Compile Result Binary file main Bytecode file Main.class
 Input cin >> Scanner
 Output cout << System.out.println()
-
-
